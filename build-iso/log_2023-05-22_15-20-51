@@ -1,0 +1,426 @@
+2023-05-22 15:20:51.694818 +0000 > starting log
+2023-05-22 15:20:51.694953 +0000 build-iso: > starting build with log
+2023-05-22 15:21:02.142729 +0000 build-iso: copy-in (cmd): /usr/bin/qvm-run-vm disp323 bash -c 'rm -rf /builder/incoming/installer /builder/plugins/installer'
+2023-05-22 15:21:02.275753 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp323 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/installer
+2023-05-22 15:21:02.420776 +0000 build-iso: copy-in (cmd): /usr/bin/qvm-run-vm disp323 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/installer /builder/plugins'
+2023-05-22 15:21:02.545575 +0000 build-iso: copy-in (cmd): /usr/bin/qvm-run-vm disp323 bash -c 'rm -rf /builder/incoming/chroot_rpm /builder/plugins/chroot_rpm'
+2023-05-22 15:21:02.681274 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm disp323 qubesbuilder.FileCopyIn /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/chroot_rpm
+2023-05-22 15:21:02.811690 +0000 build-iso: copy-in (cmd): /usr/bin/qvm-run-vm disp323 bash -c 'mkdir -p /builder/plugins && mv /builder/incoming/chroot_rpm /builder/plugins'
+2023-05-22 15:21:02.998865 +0000 build-iso: Executing '/usr/bin/qvm-run-vm disp323 env VERBOSE='1' DEBUG='1' BACKEND_VMM='xen' DIST='fc37' INSTALL_DIR='/builder/mnt' ARTIFACTS_DIR='/builder/build' PLUGINS_DIR='/builder/plugins' PACKAGES_DIR='/builder/repository' CACHE_DIR='/builder/cache' ISO_USE_KERNEL_LATEST='0' ISO_IS_FINAL='0' USE_QUBES_REPO_VERSION='4.2' USE_QUBES_REPO_TESTING='1' INSTALLER_KICKSTART='/builder/plugins/installer/conf/iso-online-testing.ks' bash -c 'mkdir -p /builder/repository && cd /builder/repository && createrepo_c . && sudo --preserve-env=DIST,USE_QUBES_REPO_VERSION /usr/libexec/mock/mock --root /builder/plugins/installer/mock/fedora-37-x86_64.cfg --init --isolation=nspawn --verbose --enablerepo=qubes-current --enablerepo=qubes-current-testing && sudo chmod a+rX -R /builder/cache/mock/fedora-37-x86_64/dnf_cache/''.
+2023-05-22 15:21:03.215514 +0000 build-iso: output: Directory walk started
+2023-05-22 15:21:03.215576 +0000 build-iso: output: Directory walk done - 0 packages
+2023-05-22 15:21:03.215593 +0000 build-iso: output: Temporary output repo path: ./.repodata/
+2023-05-22 15:21:03.215605 +0000 build-iso: output: Preparing sqlite DBs
+2023-05-22 15:21:03.215616 +0000 build-iso: output: Pool started (with 5 workers)
+2023-05-22 15:21:03.215636 +0000 build-iso: output: Pool finished
+2023-05-22 15:21:03.856396 +0000 build-iso: output: INFO: mock.py version 3.5 starting (python version = 3.11.3, NVR = mock-3.5-1.fc37)...
+2023-05-22 15:21:03.880101 +0000 build-iso: output: DEBUG: search for 'dnf' package manager
+2023-05-22 15:21:03.896406 +0000 build-iso: output: Start: init plugins
+2023-05-22 15:21:03.913024 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-37-x86_64/yum_cache
+2023-05-22 15:21:03.913375 +0000 build-iso: output: DEBUG: creating dir: /builder/cache/mock/fedora-37-x86_64/yum_cache
+2023-05-22 15:21:03.916794 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-37-x86_64/dnf_cache
+2023-05-22 15:21:03.917214 +0000 build-iso: output: DEBUG: creating dir: /builder/cache/mock/fedora-37-x86_64/dnf_cache
+2023-05-22 15:21:03.925143 +0000 build-iso: output: INFO: selinux disabled
+2023-05-22 15:21:03.929189 +0000 build-iso: output: Finish: init plugins
+2023-05-22 15:21:03.957780 +0000 build-iso: output: INFO: Signal handler active
+2023-05-22 15:21:03.961460 +0000 build-iso: output: Start: run
+2023-05-22 15:21:03.961474 +0000 build-iso: output: DEBUG: mock final configuration:
+2023-05-22 15:21:04.000881 +0000 build-iso: output: DEBUG:     _aliases:  {'yum.conf': 'dnf.conf'}
+2023-05-22 15:21:04.000947 +0000 build-iso: output: DEBUG:     config_paths:  []
+2023-05-22 15:21:04.000961 +0000 build-iso: output: DEBUG:     version:  3.5
+2023-05-22 15:21:04.000981 +0000 build-iso: output: DEBUG:     basedir:  /builder/build
+2023-05-22 15:21:04.000994 +0000 build-iso: output: DEBUG:     resultdir:  /builder/build/fedora-37-x86_64/result
+2023-05-22 15:21:04.001027 +0000 build-iso: output: DEBUG:     rootdir:  /builder/build/fedora-37-x86_64/root
+2023-05-22 15:21:04.001168 +0000 build-iso: output: DEBUG:     cache_topdir:  /builder/cache/mock
+2023-05-22 15:21:04.001183 +0000 build-iso: output: DEBUG:     clean:  True
+2023-05-22 15:21:04.001192 +0000 build-iso: output: DEBUG:     check:  True
+2023-05-22 15:21:04.001205 +0000 build-iso: output: DEBUG:     post_install:  False
+2023-05-22 15:21:04.001263 +0000 build-iso: output: DEBUG:     chroothome:  /builddir
+2023-05-22 15:21:04.001313 +0000 build-iso: output: DEBUG:     log_config_file:  logging.ini
+2023-05-22 15:21:04.001357 +0000 build-iso: output: DEBUG:     rpmbuild_timeout:  0
+2023-05-22 15:21:04.001407 +0000 build-iso: output: DEBUG:     chrootuid:  1000
+2023-05-22 15:21:04.001452 +0000 build-iso: output: DEBUG:     chrootgid:  135
+2023-05-22 15:21:04.001502 +0000 build-iso: output: DEBUG:     chrootgroup:  mock
+2023-05-22 15:21:04.001547 +0000 build-iso: output: DEBUG:     chrootuser:  mockbuild
+2023-05-22 15:21:04.001615 +0000 build-iso: output: DEBUG:     build_log_fmt_name:  unadorned
+2023-05-22 15:21:04.001626 +0000 build-iso: output: DEBUG:     root_log_fmt_name:  detailed
+2023-05-22 15:21:04.001695 +0000 build-iso: output: DEBUG:     state_log_fmt_name:  state
+2023-05-22 15:21:04.001735 +0000 build-iso: output: DEBUG:     online:  True
+2023-05-22 15:21:04.001781 +0000 build-iso: output: DEBUG:     isolation:  None
+2023-05-22 15:21:04.001890 +0000 build-iso: output: DEBUG:     use_nspawn:  None
+2023-05-22 15:21:04.001925 +0000 build-iso: output: DEBUG:     rpmbuild_networking:  False
+2023-05-22 15:21:04.002163 +0000 build-iso: output: DEBUG:     nspawn_args:  ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.n5z1l_wt:/etc/resolv.conf', '--bind=/dev/btrfs-control', '--bind=/dev/mapper/control', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
+2023-05-22 15:21:04.002204 +0000 build-iso: output: DEBUG:     use_container_host_hostname:  True
+2023-05-22 15:21:04.002222 +0000 build-iso: output: DEBUG:     use_bootstrap:  False
+2023-05-22 15:21:04.002232 +0000 build-iso: output: DEBUG:     use_bootstrap_image:  False
+2023-05-22 15:21:04.002275 +0000 build-iso: output: DEBUG:     bootstrap_image:  fedora:latest
+2023-05-22 15:21:04.002287 +0000 build-iso: output: DEBUG:     internal_dev_setup:  True
+2023-05-22 15:21:04.002300 +0000 build-iso: output: DEBUG:     cleanup_on_success:  False
+2023-05-22 15:21:04.002309 +0000 build-iso: output: DEBUG:     cleanup_on_failure:  False
+2023-05-22 15:21:04.002372 +0000 build-iso: output: DEBUG:     exclude_from_homedir_cleanup:  ['build/SOURCES', '.bash_history', '.bashrc']
+2023-05-22 15:21:04.002385 +0000 build-iso: output: DEBUG:     createrepo_on_rpms:  False
+2023-05-22 15:21:04.002403 +0000 build-iso: output: DEBUG:     createrepo_command:  /usr/bin/createrepo_c -d -q -x *.src.rpm
+2023-05-22 15:21:04.002413 +0000 build-iso: output: DEBUG:     tar_binary:  /bin/tar
+2023-05-22 15:21:04.002464 +0000 build-iso: output: DEBUG:     tar:  gnutar
+2023-05-22 15:21:04.002475 +0000 build-iso: output: DEBUG:     backup_on_clean:  False
+2023-05-22 15:21:04.002509 +0000 build-iso: output: DEBUG:     backup_base_dir:  /builder/build/backup
+2023-05-22 15:21:04.002543 +0000 build-iso: output: DEBUG:     redhat_subscription_required:  False
+2023-05-22 15:21:04.002555 +0000 build-iso: output: DEBUG:     ssl_ca_bundle_path:  None
+2023-05-22 15:21:04.002571 +0000 build-iso: output: DEBUG:     ssl_extra_certs:  None
+2023-05-22 15:21:04.002641 +0000 build-iso: output: DEBUG:     plugins:  ['tmpfs', 'root_cache', 'yum_cache', 'mount', 'bind_mount', 'ccache', 'selinux', 'package_state', 'chroot_scan', 'lvm_root', 'compress_logs', 'sign', 'pm_request', 'hw_info', 'procenv', 'showrc', 'rpkg_preprocessor', 'overlayfs']
+2023-05-22 15:21:04.002672 +0000 build-iso: output: DEBUG:     plugin_dir:  /usr/lib/python3.11/site-packages/mockbuild/plugins
+2023-05-22 15:21:04.003326 +0000 build-iso: output: DEBUG:     plugin_conf:  {'ccache_enable': False, 'ccache_opts': {'max_cache_size': '4G', 'compress': None, 'dir': '/builder/cache/mock/fedora-37-x86_64/ccache/u1000/', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'yum_cache_enable': True, 'yum_cache_opts': {'max_age_days': 30, 'max_metadata_age_days': 30, 'online': True, 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'root_cache_enable': True, 'root_cache_opts': {'age_check': True, 'max_age_days': 15, 'dir': '/builder/cache/mock/fedora-37-x86_64/root_cache/', 'compress_program': 'pigz', 'decompress_program': None, 'exclude_dirs': ['./proc', './sys', './dev', './tmp/ccache', './var/cache/yum', './var/cache/dnf', './var/log'], 'extension': '.gz', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'bind_mount_enable': True, 'bind_mount_opts': {'dirs': [('/builder', '/builder')], 'create_dirs': False, 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'mount_enable': True, 'mount_opts': {'dirs': [], 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'tmpfs_enable': False, 'tmpfs_opts': {'required_ram_mb': 900, 'max_fs_size': None, 'mode': '0755', 'keep_mounted': False, 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'selinux_enable': True, 'selinux_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'package_state_enable': True, 'package_state_opts': {'available_pkgs': False, 'installed_pkgs': True, 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'pm_request_enable': False, 'pm_request_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'lvm_root_enable': False, 'lvm_root_opts': {'pool_name': 'mockbuild', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'chroot_scan_enable': False, 'chroot_scan_opts': {'regexes': ['^[^k]?core(\\.\\d+)?$', '\\.log$'], 'only_failed': True, 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'sign_enable': False, 'sign_opts': {'cmd': 'rpmsign', 'opts': '--addsign %(rpms)s', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'hw_info_enable': True, 'hw_info_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'procenv_enable': False, 'procenv_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'showrc_enable': False, 'showrc_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'compress_logs_enable': False, 'compress_logs_opts': {'command': 'gzip', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'rpkg_preprocessor_enable': False, 'rpkg_preprocessor_opts': {'requires': ['preproc-rpmspec'], 'cmd': '/usr/bin/preproc-rpmspec %(source_spec)s --output %(target_spec)s', 'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}, 'overlayfs_enable': False, 'overlayfs_opts': {'basedir': '/builder/build/fedora-37-x86_64', 'cache_topdir': '/builder/cache/mock', 'cachedir': '/builder/cache/mock/fedora-37-x86_64', 'root': 'fedora-37-x86_64', 'resultdir': '/builder/build/fedora-37-x86_64/result'}}
+2023-05-22 15:21:04.003367 +0000 build-iso: output: DEBUG:     environment:  {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}
+2023-05-22 15:21:04.003379 +0000 build-iso: output: DEBUG:     scm:  False
+2023-05-22 15:21:04.003425 +0000 build-iso: output: DEBUG:     scm_opts:  {'method': 'git', 'cvs_get': 'cvs -d /srv/cvs co SCM_BRN SCM_PKG', 'git_get': 'git clone SCM_BRN git://localhost/SCM_PKG.git SCM_PKG', 'svn_get': 'svn co file:///srv/svn/SCM_PKG/SCM_BRN SCM_PKG', 'distgit_get': 'rpkg clone -a --branch SCM_BRN SCM_PKG SCM_PKG', 'distgit_src_get': 'rpkg sources', 'spec': 'SCM_PKG.spec', 'ext_src_dir': '/dev/null', 'write_tar': False, 'git_timestamps': False, 'exclude_vcs': True}
+2023-05-22 15:21:04.003439 +0000 build-iso: output: DEBUG:     useradd:  /usr/sbin/useradd -o -m -u 1000 -g 135 -d /builddir -n mockbuild
+2023-05-22 15:21:04.003449 +0000 build-iso: output: DEBUG:     use_host_resolv:  False
+2023-05-22 15:21:04.003465 +0000 build-iso: output: DEBUG:     chroot_setup_cmd:  install @buildsys-build dnf make anaconda pykickstart lorax-templates-qubes livecd-tools dracut-live python3-jinja2 createrepo_c
+2023-05-22 15:21:04.003475 +0000 build-iso: output: DEBUG:     target_arch:  x86_64
+2023-05-22 15:21:04.003484 +0000 build-iso: output: DEBUG:     releasever:  37
+2023-05-22 15:21:04.003494 +0000 build-iso: output: DEBUG:     rpmbuild_arch:  x86_64
+2023-05-22 15:21:04.003502 +0000 build-iso: output: DEBUG:     dnf_vars:  {}
+2023-05-22 15:21:04.003511 +0000 build-iso: output: DEBUG:     yum_builddep_opts:  []
+2023-05-22 15:21:04.003520 +0000 build-iso: output: DEBUG:     yum_common_opts:  []
+2023-05-22 15:21:04.003529 +0000 build-iso: output: DEBUG:     update_before_build:  True
+2023-05-22 15:21:04.003537 +0000 build-iso: output: DEBUG:     priorities.conf:
+2023-05-22 15:21:04.003545 +0000 build-iso: output: [main]
+2023-05-22 15:21:04.003553 +0000 build-iso: output: enabled=0
+2023-05-22 15:21:04.003563 +0000 build-iso: output: DEBUG:     rhnplugin.conf:
+2023-05-22 15:21:04.003570 +0000 build-iso: output: [main]
+2023-05-22 15:21:04.003578 +0000 build-iso: output: enabled=0
+2023-05-22 15:21:04.003587 +0000 build-iso: output: DEBUG:     subscription-manager.conf:
+2023-05-22 15:21:04.003602 +0000 build-iso: output: DEBUG:     more_buildreqs:  {}
+2023-05-22 15:21:04.003611 +0000 build-iso: output: DEBUG:     nosync:  False
+2023-05-22 15:21:04.003620 +0000 build-iso: output: DEBUG:     nosync_force:  False
+2023-05-22 15:21:04.003636 +0000 build-iso: output: DEBUG:     files:  {'etc/hosts': '127.0.0.1 localhost localhost.localdomain\n::1       localhost localhost.localdomain localhost6 localhost6.localdomain6\n'}
+2023-05-22 15:21:04.003660 +0000 build-iso: output: DEBUG:     macros:  {'%_topdir': '/builddir/build', '%_rpmfilename': '%%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm', '%_buildhost': 'reproducible', '%clamp_mtime_to_source_date_epoch': 'Y', '%source_date_epoch_from_changelog': 'Y', '%use_source_date_epoch_as_buildtime': 'Y', '%_platform_multiplier': 1}
+2023-05-22 15:21:04.003670 +0000 build-iso: output: DEBUG:     hostname:  None
+2023-05-22 15:21:04.003679 +0000 build-iso: output: DEBUG:     module_enable:  []
+2023-05-22 15:21:04.003692 +0000 build-iso: output: DEBUG:     module_install:  []
+2023-05-22 15:21:04.003702 +0000 build-iso: output: DEBUG:     module_setup_commands:  []
+2023-05-22 15:21:04.003711 +0000 build-iso: output: DEBUG:     forcearch:  None
+2023-05-22 15:21:04.003721 +0000 build-iso: output: DEBUG:     bootstrap_chroot_additional_packages:  []
+2023-05-22 15:21:04.003731 +0000 build-iso: output: DEBUG:     bootstrap_module_enable:  []
+2023-05-22 15:21:04.003743 +0000 build-iso: output: DEBUG:     bootstrap_module_install:  []
+2023-05-22 15:21:04.003754 +0000 build-iso: output: DEBUG:     bootstrap_module_setup_commands:  []
+2023-05-22 15:21:04.003765 +0000 build-iso: output: DEBUG:     no_root_shells:  False
+2023-05-22 15:21:04.003775 +0000 build-iso: output: DEBUG:     extra_chroot_dirs:  ['/run/lock']
+2023-05-22 15:21:04.003826 +0000 build-iso: output: DEBUG:     package_manager:  dnf
+2023-05-22 15:21:04.003840 +0000 build-iso: output: DEBUG:     package_manager_max_attempts:  1
+2023-05-22 15:21:04.003852 +0000 build-iso: output: DEBUG:     package_manager_attempt_delay:  10
+2023-05-22 15:21:04.003865 +0000 build-iso: output: DEBUG:     dynamic_buildrequires:  True
+2023-05-22 15:21:04.003904 +0000 build-iso: output: DEBUG:     dynamic_buildrequires_max_loops:  10
+2023-05-22 15:21:04.003939 +0000 build-iso: output: DEBUG:     external_buildrequires:  False
+2023-05-22 15:21:04.003950 +0000 build-iso: output: DEBUG:     dev_loop_count:  12
+2023-05-22 15:21:04.003963 +0000 build-iso: output: DEBUG:     yum_command:  /usr/bin/yum
+2023-05-22 15:21:04.003972 +0000 build-iso: output: DEBUG:     system_yum_command:  /usr/bin/yum
+2023-05-22 15:21:04.004016 +0000 build-iso: output: DEBUG:     yum_install_command:  install yum yum-utils
+2023-05-22 15:21:04.004054 +0000 build-iso: output: DEBUG:     yum_builddep_command:  /usr/bin/yum-builddep
+2023-05-22 15:21:04.004065 +0000 build-iso: output: DEBUG:     dnf_command:  /usr/bin/dnf
+2023-05-22 15:21:04.004077 +0000 build-iso: output: DEBUG:     system_dnf_command:  /usr/bin/dnf
+2023-05-22 15:21:04.004124 +0000 build-iso: output: DEBUG:     dnf_install_command:  install dnf dnf-plugins-core
+2023-05-22 15:21:04.004138 +0000 build-iso: output: DEBUG:     microdnf_command:  /usr/bin/microdnf
+2023-05-22 15:21:04.004240 +0000 build-iso: output: DEBUG:     microdnf_install_command:  dnf-install microdnf dnf dnf-plugins-core
+2023-05-22 15:21:04.004258 +0000 build-iso: output: DEBUG:     microdnf_builddep_command:  /usr/bin/dnf
+2023-05-22 15:21:04.004269 +0000 build-iso: output: DEBUG:     microdnf_builddep_opts:  []
+2023-05-22 15:21:04.004292 +0000 build-iso: output: DEBUG:     microdnf_common_opts:  []
+2023-05-22 15:21:04.004306 +0000 build-iso: output: DEBUG:     rpm_command:  /bin/rpm
+2023-05-22 15:21:04.004317 +0000 build-iso: output: DEBUG:     rpmbuild_command:  /usr/bin/rpmbuild
+2023-05-22 15:21:04.004331 +0000 build-iso: output: DEBUG:     dnf_disable_plugins:  ['local', 'spacewalk', 'versionlock']
+2023-05-22 15:21:04.004342 +0000 build-iso: output: DEBUG:     user_agent:  Mock (fedora-37-x86_64; x86_64)
+2023-05-22 15:21:04.004353 +0000 build-iso: output: DEBUG:     opstimeout:  0
+2023-05-22 15:21:04.004391 +0000 build-iso: output: DEBUG:     stderr_line_prefix:
+2023-05-22 15:21:04.004403 +0000 build-iso: output: DEBUG:     additional_packages:  []
+2023-05-22 15:21:04.004641 +0000 build-iso: output: DEBUG:     no-config:  {'epel-8': {'alternatives': {'alma+epel-8': {'description': ['Builds against AlmaLinux 8 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-8': {'description': ['Builds against CentOS Stream 8 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 8) together with the official EPEL 8 repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'circlelinux+epel-8': {'description': ['Builds against Circle Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://cclinux.org/']}, 'rhel+epel-8': {'description': ['Builds against Red Hat Enterprise Linux 8 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-8': {'description': ['Builds against Rocky Linux 8 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}, 'epel-9': {'alternatives': {'alma+epel-9': {'description': ['Builds against AlmaLinux 9 repositories, together with the official EPEL repositories.', 'Project page: https://almalinux.org/']}, 'centos-stream+epel-9': {'description': ['Builds against CentOS Stream 9 repositories (some packages may be a bit ahead the Red Hat Enterprise Linux 9) together with the official EPEL repositories.', 'Project page: https://www.centos.org/centos-stream/']}, 'rhel+epel-9': {'description': ['Builds against Red Hat Enterprise Linux 9 repositories, together with the official EPEL repositories.', 'This mimics what is done in the official EPEL build system, but you need a Red Hat subscription:', 'https://rpm-software-management.github.io/mock/Feature-rhelchroots']}, 'rocky+epel-9': {'description': ['Builds against Rocky Linux 9 repositories, together with the official EPEL repositories.', 'Project page: https://rockylinux.org/']}}}}
+2023-05-22 15:21:04.004659 +0000 build-iso: output: DEBUG:     seccomp:  False
+2023-05-22 15:21:04.004683 +0000 build-iso: output: DEBUG:     qemu_user_static_mapping:  {'aarch64': 'aarch64', 'armv7hl': 'arm', 'i386': 'i386', 'i686': 'i386', 'ppc64': 'ppc64', 'ppc64le': 'ppc64le', 's390x': 's390x', 'x86_64': 'x86_64'}
+2023-05-22 15:21:04.004694 +0000 build-iso: output: DEBUG:     config_path:  /etc/mock
+2023-05-22 15:21:04.004703 +0000 build-iso: output: DEBUG:     chroot_name:  fedora-37-x86_64
+2023-05-22 15:21:04.004718 +0000 build-iso: output: DEBUG:     config_file:  /builder/plugins/installer/mock/fedora-37-x86_64.cfg
+2023-05-22 15:21:04.004727 +0000 build-iso: output: DEBUG:     dist:  fc37
+2023-05-22 15:21:04.004737 +0000 build-iso: output: DEBUG:     legal_host_arches:  ('x86_64',)
+2023-05-22 15:21:04.004772 +0000 build-iso: output: DEBUG:     root:  fedora-37-x86_64
+2023-05-22 15:21:04.004783 +0000 build-iso: output: DEBUG:     dnf.conf:
+2023-05-22 15:21:04.004794 +0000 build-iso: output: [main]
+2023-05-22 15:21:04.004837 +0000 build-iso: output: keepcache=1
+2023-05-22 15:21:04.004847 +0000 build-iso: output: debuglevel=2
+2023-05-22 15:21:04.004883 +0000 build-iso: output: reposdir=/dev/null
+2023-05-22 15:21:04.004893 +0000 build-iso: output: logfile=/var/log/yum.log
+2023-05-22 15:21:04.004903 +0000 build-iso: output: retries=20
+2023-05-22 15:21:04.004950 +0000 build-iso: output: obsoletes=1
+2023-05-22 15:21:04.004961 +0000 build-iso: output: gpgcheck=0
+2023-05-22 15:21:04.004991 +0000 build-iso: output: assumeyes=1
+2023-05-22 15:21:04.005001 +0000 build-iso: output: syslog_ident=mock
+2023-05-22 15:21:04.005031 +0000 build-iso: output: syslog_device=
+2023-05-22 15:21:04.005041 +0000 build-iso: output: install_weak_deps=0
+2023-05-22 15:21:04.005071 +0000 build-iso: output: metadata_expire=0
+2023-05-22 15:21:04.005081 +0000 build-iso: output: mdpolicy=group:primary
+2023-05-22 15:21:04.005091 +0000 build-iso: output: best=1
+2023-05-22 15:21:04.005151 +0000 build-iso: output: 
+2023-05-22 15:21:04.005167 +0000 build-iso: output: # repos
+2023-05-22 15:21:04.005220 +0000 build-iso: output: 
+2023-05-22 15:21:04.005234 +0000 build-iso: output: [fedora]
+2023-05-22 15:21:04.005242 +0000 build-iso: output: name=fedora
+2023-05-22 15:21:04.005257 +0000 build-iso: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-37&arch=$basearch
+2023-05-22 15:21:04.005267 +0000 build-iso: output: failovermethod=priority
+2023-05-22 15:21:04.005302 +0000 build-iso: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-37-primary
+2023-05-22 15:21:04.005312 +0000 build-iso: output: gpgcheck=1
+2023-05-22 15:21:04.005324 +0000 build-iso: output: skip_if_unavailable=0
+2023-05-22 15:21:04.005331 +0000 build-iso: output: 
+2023-05-22 15:21:04.005375 +0000 build-iso: output: [updates]
+2023-05-22 15:21:04.005387 +0000 build-iso: output: name=updates
+2023-05-22 15:21:04.005435 +0000 build-iso: output: metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f37&arch=$basearch
+2023-05-22 15:21:04.005446 +0000 build-iso: output: failovermethod=priority
+2023-05-22 15:21:04.005461 +0000 build-iso: output: gpgkey=file:///usr/share/distribution-gpg-keys/fedora/RPM-GPG-KEY-fedora-37-primary
+2023-05-22 15:21:04.005502 +0000 build-iso: output: gpgcheck=1
+2023-05-22 15:21:04.005512 +0000 build-iso: output: skip_if_unavailable=0
+2023-05-22 15:21:04.005522 +0000 build-iso: output: 
+2023-05-22 15:21:04.005533 +0000 build-iso: output: [builder-local]
+2023-05-22 15:21:04.005570 +0000 build-iso: output: name=builder-local
+2023-05-22 15:21:04.005606 +0000 build-iso: output: baseurl=file:///builder/repository
+2023-05-22 15:21:04.005639 +0000 build-iso: output: gpgcheck=0
+2023-05-22 15:21:04.005649 +0000 build-iso: output: exclude=qubes-release
+2023-05-22 15:21:04.005679 +0000 build-iso: output: skip_if_unavailable=0
+2023-05-22 15:21:04.005688 +0000 build-iso: output: 
+2023-05-22 15:21:04.005699 +0000 build-iso: output: [qubes-current]
+2023-05-22 15:21:04.005747 +0000 build-iso: output: name=qubes-host-current
+2023-05-22 15:21:04.005760 +0000 build-iso: output: baseurl=https://yum.qubes-os.org/r4.2/current/host/fc37
+2023-05-22 15:21:04.005791 +0000 build-iso: output: failovermethod=priority
+2023-05-22 15:21:04.005804 +0000 build-iso: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-4.2-primary
+2023-05-22 15:21:04.005834 +0000 build-iso: output: gpgcheck=1
+2023-05-22 15:21:04.005844 +0000 build-iso: output: repo_gpgcheck = 1
+2023-05-22 15:21:04.005874 +0000 build-iso: output: exclude=qubes-release
+2023-05-22 15:21:04.005883 +0000 build-iso: output: enabled=0
+2023-05-22 15:21:04.005914 +0000 build-iso: output: skip_if_unavailable=0
+2023-05-22 15:21:04.005923 +0000 build-iso: output: 
+2023-05-22 15:21:04.005957 +0000 build-iso: output: [qubes-current-testing]
+2023-05-22 15:21:04.005968 +0000 build-iso: output: name=qubes-host-testing
+2023-05-22 15:21:04.005989 +0000 build-iso: output: baseurl=https://yum.qubes-os.org/r4.2/current-testing/host/fc37
+2023-05-22 15:21:04.006031 +0000 build-iso: output: failovermethod=priority
+2023-05-22 15:21:04.006045 +0000 build-iso: output: gpgkey=file:///builder/plugins/chroot_rpm/keys/RPM-GPG-KEY-qubes-4.2-primary
+2023-05-22 15:21:04.006065 +0000 build-iso: output: gpgcheck=1
+2023-05-22 15:21:04.006074 +0000 build-iso: output: repo_gpgcheck = 1
+2023-05-22 15:21:04.006112 +0000 build-iso: output: exclude=qubes-release
+2023-05-22 15:21:04.006147 +0000 build-iso: output: enabled=0
+2023-05-22 15:21:04.006157 +0000 build-iso: output: skip_if_unavailable=0
+2023-05-22 15:21:04.006201 +0000 build-iso: output: 
+2023-05-22 15:21:04.006213 +0000 build-iso: output: DEBUG:     __jinja_expand:  True
+2023-05-22 15:21:04.006222 +0000 build-iso: output: DEBUG:     verbose:  2
+2023-05-22 15:21:04.006234 +0000 build-iso: output: DEBUG:     print_main_output:  False
+2023-05-22 15:21:04.006272 +0000 build-iso: output: DEBUG:     cache_alterations:  False
+2023-05-22 15:21:04.006312 +0000 build-iso: output: DEBUG:     enable_disable_repos:  ['--enablerepo', 'qubes-current', '--enablerepo', 'qubes-current-testing']
+2023-05-22 15:21:04.006331 +0000 build-iso: output: DEBUG:     build_log_fmt_str:  %(message)s
+2023-05-22 15:21:04.006346 +0000 build-iso: output: DEBUG:     root_log_fmt_str:  %(levelname)s %(filename)s:%(lineno)d:  %(message)s
+2023-05-22 15:21:04.006359 +0000 build-iso: output: DEBUG:     state_log_fmt_str:  %(asctime)s - %(message)s
+2023-05-22 15:21:04.006371 +0000 build-iso: output: Start: clean chroot
+2023-05-22 15:21:04.006417 +0000 build-iso: output: Finish: clean chroot
+2023-05-22 15:21:04.009033 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64
+2023-05-22 15:21:04.010093 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64
+2023-05-22 15:21:04.010624 +0000 build-iso: output: Start: chroot init
+2023-05-22 15:21:04.011635 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64
+2023-05-22 15:21:04.013238 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root
+2023-05-22 15:21:04.013754 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root
+2023-05-22 15:21:04.021395 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/result
+2023-05-22 15:21:04.021966 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/result
+2023-05-22 15:21:04.024373 +0000 build-iso: output: INFO: calling preinit hooks
+2023-05-22 15:21:04.025437 +0000 build-iso: output: INFO: enabled root cache
+2023-05-22 15:21:04.026736 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-37-x86_64/root_cache/
+2023-05-22 15:21:04.027382 +0000 build-iso: output: DEBUG: creating dir: /builder/cache/mock/fedora-37-x86_64/root_cache/
+2023-05-22 15:21:04.028013 +0000 build-iso: output: INFO: enabled package manager cache
+2023-05-22 15:21:04.029257 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-37-x86_64/yum_cache
+2023-05-22 15:21:04.030445 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/cache/mock/fedora-37-x86_64/dnf_cache
+2023-05-22 15:21:04.030563 +0000 build-iso: output: Start: cleaning package manager metadata
+2023-05-22 15:21:04.030579 +0000 build-iso: output: Finish: cleaning package manager metadata
+2023-05-22 15:21:04.034708 +0000 build-iso: output: INFO: enabled HW Info plugin
+2023-05-22 15:21:04.036627 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.036714 +0000 build-iso: output: DEBUG: Executing command: ['/usr/bin/lscpu'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.042724 +0000 build-iso: output: DEBUG: Architecture:                    x86_64
+2023-05-22 15:21:04.042757 +0000 build-iso: output: DEBUG: CPU op-mode(s):                  32-bit, 64-bit
+2023-05-22 15:21:04.042840 +0000 build-iso: output: DEBUG: Address sizes:                   48 bits physical, 48 bits virtual
+2023-05-22 15:21:04.042858 +0000 build-iso: output: DEBUG: Byte Order:                      Little Endian
+2023-05-22 15:21:04.042930 +0000 build-iso: output: DEBUG: CPU(s):                          4
+2023-05-22 15:21:04.042993 +0000 build-iso: output: DEBUG: On-line CPU(s) list:             0-3
+2023-05-22 15:21:04.043061 +0000 build-iso: output: DEBUG: Vendor ID:                       AuthenticAMD
+2023-05-22 15:21:04.043111 +0000 build-iso: output: DEBUG: Model name:                      AMD Ryzen 9 5900X 12-Core Processor
+2023-05-22 15:21:04.043236 +0000 build-iso: output: DEBUG: CPU family:                      25
+2023-05-22 15:21:04.043257 +0000 build-iso: output: DEBUG: Model:                           33
+2023-05-22 15:21:04.043319 +0000 build-iso: output: DEBUG: Thread(s) per core:              1
+2023-05-22 15:21:04.043384 +0000 build-iso: output: DEBUG: Core(s) per socket:              4
+2023-05-22 15:21:04.043466 +0000 build-iso: output: DEBUG: Socket(s):                       1
+2023-05-22 15:21:04.043509 +0000 build-iso: output: DEBUG: Stepping:                        2
+2023-05-22 15:21:04.043600 +0000 build-iso: output: DEBUG: BogoMIPS:                        7386.10
+2023-05-22 15:21:04.043768 +0000 build-iso: output: DEBUG: Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cr8_legacy abm sse4a misalignsse 3dnowprefetch bpext ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr arat umip pku ospke vaes vpclmulqdq rdpid
+2023-05-22 15:21:04.043785 +0000 build-iso: output: DEBUG: Hypervisor vendor:               Xen
+2023-05-22 15:21:04.043836 +0000 build-iso: output: DEBUG: Virtualization type:             full
+2023-05-22 15:21:04.043907 +0000 build-iso: output: DEBUG: L1d cache:                       128 KiB (4 instances)
+2023-05-22 15:21:04.043965 +0000 build-iso: output: DEBUG: L1i cache:                       128 KiB (4 instances)
+2023-05-22 15:21:04.044024 +0000 build-iso: output: DEBUG: L2 cache:                        2 MiB (4 instances)
+2023-05-22 15:21:04.044088 +0000 build-iso: output: DEBUG: L3 cache:                        256 MiB (4 instances)
+2023-05-22 15:21:04.044140 +0000 build-iso: output: DEBUG: NUMA node(s):                    1
+2023-05-22 15:21:04.044227 +0000 build-iso: output: DEBUG: NUMA node0 CPU(s):               0-3
+2023-05-22 15:21:04.044279 +0000 build-iso: output: DEBUG: Vulnerability Itlb multihit:     Not affected
+2023-05-22 15:21:04.044342 +0000 build-iso: output: DEBUG: Vulnerability L1tf:              Not affected
+2023-05-22 15:21:04.044400 +0000 build-iso: output: DEBUG: Vulnerability Mds:               Not affected
+2023-05-22 15:21:04.044456 +0000 build-iso: output: DEBUG: Vulnerability Meltdown:          Not affected
+2023-05-22 15:21:04.044525 +0000 build-iso: output: DEBUG: Vulnerability Mmio stale data:   Not affected
+2023-05-22 15:21:04.044567 +0000 build-iso: output: DEBUG: Vulnerability Retbleed:          Not affected
+2023-05-22 15:21:04.044638 +0000 build-iso: output: DEBUG: Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+2023-05-22 15:21:04.044705 +0000 build-iso: output: DEBUG: Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+2023-05-22 15:21:04.044776 +0000 build-iso: output: DEBUG: Vulnerability Spectre v2:        Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP disabled, RSB filling, PBRSB-eIBRS Not affected
+2023-05-22 15:21:04.044831 +0000 build-iso: output: DEBUG: Vulnerability Srbds:             Not affected
+2023-05-22 15:21:04.044883 +0000 build-iso: output: DEBUG: Vulnerability Tsx async abort:   Not affected
+2023-05-22 15:21:04.045322 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.049778 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.049849 +0000 build-iso: output: DEBUG: Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.054955 +0000 build-iso: output: DEBUG:                total        used        free      shared  buff/cache   available
+2023-05-22 15:21:04.055013 +0000 build-iso: output: DEBUG: Mem:         6058968      388236     5338644        2624      332088     5438196
+2023-05-22 15:21:04.055082 +0000 build-iso: output: DEBUG: Swap:        1048572           0     1048572
+2023-05-22 15:21:04.055135 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.062026 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.062074 +0000 build-iso: output: DEBUG: Executing command: ['/bin/df', '-H', '/builder/build/fedora-37-x86_64/root', '/builder/cache/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.066332 +0000 build-iso: output: DEBUG: Filesystem      Size  Used Avail Use% Mounted on
+2023-05-22 15:21:04.066345 +0000 build-iso: output: DEBUG: /dev/xvdb        32G  2.2M   32G   1% /builder
+2023-05-22 15:21:04.066360 +0000 build-iso: output: DEBUG: /dev/xvdb        32G  2.2M   32G   1% /builder
+2023-05-22 15:21:04.066388 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.074830 +0000 build-iso: output: DEBUG: create skeleton dirs
+2023-05-22 15:21:04.079443 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/lib/rpm
+2023-05-22 15:21:04.080811 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/lib/rpm
+2023-05-22 15:21:04.084915 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/lib/yum
+2023-05-22 15:21:04.086217 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/lib/yum
+2023-05-22 15:21:04.090154 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/lib/dbus
+2023-05-22 15:21:04.090804 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/lib/dbus
+2023-05-22 15:21:04.092561 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/log
+2023-05-22 15:21:04.093130 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/log
+2023-05-22 15:21:04.094865 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/cache/dnf
+2023-05-22 15:21:04.095476 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/cache/dnf
+2023-05-22 15:21:04.097251 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/cache/yum
+2023-05-22 15:21:04.097876 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/cache/yum
+2023-05-22 15:21:04.100745 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/rpm
+2023-05-22 15:21:04.101763 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/rpm
+2023-05-22 15:21:04.104907 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/tmp
+2023-05-22 15:21:04.105833 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/tmp
+2023-05-22 15:21:04.108493 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/tmp/ccache
+2023-05-22 15:21:04.109474 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/tmp/ccache
+2023-05-22 15:21:04.111601 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/tmp
+2023-05-22 15:21:04.112231 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/var/tmp
+2023-05-22 15:21:04.114024 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/dnf
+2023-05-22 15:21:04.114626 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/dnf
+2023-05-22 15:21:04.116404 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/dnf/vars
+2023-05-22 15:21:04.117004 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/dnf/vars
+2023-05-22 15:21:04.118785 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/yum.repos.d
+2023-05-22 15:21:04.119416 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/yum.repos.d
+2023-05-22 15:21:04.121199 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/yum
+2023-05-22 15:21:04.121890 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/yum
+2023-05-22 15:21:04.123666 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/proc
+2023-05-22 15:21:04.124289 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/proc
+2023-05-22 15:21:04.126084 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/sys
+2023-05-22 15:21:04.126713 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/sys
+2023-05-22 15:21:04.128495 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/run/lock
+2023-05-22 15:21:04.129128 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/run/lock
+2023-05-22 15:21:04.134205 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/result
+2023-05-22 15:21:04.135381 +0000 build-iso: output: Mock Version: 3.5
+2023-05-22 15:21:04.135687 +0000 build-iso: output: INFO: Mock Version: 3.5
+2023-05-22 15:21:04.135954 +0000 build-iso: output: INFO: Mock Version: 3.5
+2023-05-22 15:21:04.142187 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/dev/pts
+2023-05-22 15:21:04.142812 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/dev/pts
+2023-05-22 15:21:04.144827 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/dev/shm
+2023-05-22 15:21:04.145386 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/dev/shm
+2023-05-22 15:21:04.147260 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/dev/mapper
+2023-05-22 15:21:04.147876 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/dev/mapper
+2023-05-22 15:21:04.147997 +0000 build-iso: output: DEBUG: kernel version == 5.15.103-1.qubes.fc32.x86_64
+2023-05-22 15:21:04.190771 +0000 build-iso: output: DEBUG: touching file: /builder/build/fedora-37-x86_64/root/etc/fstab
+2023-05-22 15:21:04.191900 +0000 build-iso: output: DEBUG: touching file: /builder/build/fedora-37-x86_64/root/etc/yum/yum.conf
+2023-05-22 15:21:04.193144 +0000 build-iso: output: DEBUG: touching file: /builder/build/fedora-37-x86_64/root/etc/dnf/dnf.conf
+2023-05-22 15:21:04.194462 +0000 build-iso: output: DEBUG: touching file: /builder/build/fedora-37-x86_64/root/var/log/yum.log
+2023-05-22 15:21:04.197585 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/cache/yum
+2023-05-22 15:21:04.199610 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.199640 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-37-x86_64/yum_cache', '/builder/build/fedora-37-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.204578 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.205290 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/var/cache/dnf
+2023-05-22 15:21:04.207315 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.207370 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'bind', '/builder/cache/mock/fedora-37-x86_64/dnf_cache', '/builder/build/fedora-37-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.211815 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.211841 +0000 build-iso: output: DEBUG: rootdir = /builder/build/fedora-37-x86_64/root
+2023-05-22 15:21:04.211854 +0000 build-iso: output: DEBUG: resultdir = /builder/build/fedora-37-x86_64/result
+2023-05-22 15:21:04.213178 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/pki/mock
+2023-05-22 15:21:04.213835 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/etc/pki/mock
+2023-05-22 15:21:04.287860 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc/dnf
+2023-05-22 15:21:04.288601 +0000 build-iso: output: DEBUG: configure DNF vars
+2023-05-22 15:21:04.295086 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/etc
+2023-05-22 15:21:04.295872 +0000 build-iso: output: Start: dnf install
+2023-05-22 15:21:04.316592 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/proc
+2023-05-22 15:21:04.318926 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.318954 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/builder/build/fedora-37-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.324008 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.324964 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/proc
+2023-05-22 15:21:04.327395 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.327434 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/proc', '/builder/build/fedora-37-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.330473 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.333192 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.333255 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-37-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.336336 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.338883 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/sys
+2023-05-22 15:21:04.341264 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.341291 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/builder/build/fedora-37-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.345800 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.346866 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/sys
+2023-05-22 15:21:04.349254 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.349281 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/sys', '/builder/build/fedora-37-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.352119 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.354894 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.354922 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-o', 'remount,nodev,noexec,nosuid,readonly,rprivate,rbind', '--target', '/builder/build/fedora-37-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.357778 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.360475 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/dev/shm
+2023-05-22 15:21:04.362934 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.362961 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/builder/build/fedora-37-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.367570 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.368411 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/dev/pts
+2023-05-22 15:21:04.370821 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.370850 +0000 build-iso: output: DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/builder/build/fedora-37-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.373690 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:04.378556 +0000 build-iso: output: DEBUG: ensuring that dir exists: /builder/build/fedora-37-x86_64/root/installation-homedir
+2023-05-22 15:21:04.379335 +0000 build-iso: output: DEBUG: creating dir: /builder/build/fedora-37-x86_64/root/installation-homedir
+2023-05-22 15:21:04.385869 +0000 build-iso: output: DEBUG: ['/usr/bin/dnf', '--installroot', '/builder/build/fedora-37-x86_64/root/', '--releasever', '37', '--enablerepo', 'qubes-current', '--enablerepo', 'qubes-current-testing', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build', 'dnf', 'make', 'anaconda', 'pykickstart', 'lorax-templates-qubes', 'livecd-tools', 'dracut-live', 'python3-jinja2', 'createrepo_c']
+2023-05-22 15:21:04.389652 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:04.389707 +0000 build-iso: output: DEBUG: Executing command: ['/usr/bin/dnf', '--installroot', '/builder/build/fedora-37-x86_64/root/', '--releasever', '37', '--enablerepo', 'qubes-current', '--enablerepo', 'qubes-current-testing', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=versionlock', 'install', '@buildsys-build', 'dnf', 'make', 'anaconda', 'pykickstart', 'lorax-templates-qubes', 'livecd-tools', 'dracut-live', 'python3-jinja2', 'createrepo_c'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builder/build/fedora-37-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+2023-05-22 15:21:04.585501 +0000 build-iso: output: DEBUG: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2023-05-22 15:21:07.895012 +0000 build-iso: output: DEBUG: fedora                                          0.0  B/s |   0  B     00:02
+2023-05-22 15:21:07.895897 +0000 build-iso: output: DEBUG: Errors during downloading metadata for repository 'fedora':
+2023-05-22 15:21:07.895938 +0000 build-iso: output: DEBUG:   - Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=fedora-37&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2023-05-22 15:21:07.909505 +0000 build-iso: output: DEBUG: Error: Failed to download metadata for repo 'fedora': Cannot prepare internal mirrorlist: Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=fedora-37&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2023-05-22 15:21:07.941244 +0000 build-iso: output: DEBUG: Child return code was: 1
+2023-05-22 15:21:07.947888 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:07.947931 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:07.952647 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:07.960317 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:07.960376 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:07.964166 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:07.971516 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:07.971599 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:07.975043 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:07.982779 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:07.982825 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:07.987133 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:07.994762 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:07.994803 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:07.998946 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:08.006466 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:08.006505 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/builder/build/fedora-37-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:08.010908 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:08.018940 +0000 build-iso: output: DEBUG: kill orphans
+2023-05-22 15:21:08.050370 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:08.050426 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-37-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:08.054612 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:08.059109 +0000 build-iso: output: DEBUG: child environment: None
+2023-05-22 15:21:08.059151 +0000 build-iso: output: DEBUG: Executing command: ['/bin/umount', '-n', '/builder/build/fedora-37-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+2023-05-22 15:21:08.062621 +0000 build-iso: output: DEBUG: Child return code was: 0
+2023-05-22 15:21:08.064592 +0000 build-iso: output: ERROR: Command failed:
+2023-05-22 15:21:08.064708 +0000 build-iso: output:  # /usr/bin/dnf --installroot /builder/build/fedora-37-x86_64/root/ --releasever 37 --enablerepo qubes-current --enablerepo qubes-current-testing --setopt=deltarpm=False --allowerasing --disableplugin=local --disableplugin=spacewalk --disableplugin=versionlock install @buildsys-build dnf make anaconda pykickstart lorax-templates-qubes livecd-tools dracut-live python3-jinja2 createrepo_c
+2023-05-22 15:21:08.064729 +0000 build-iso: output: No matches found for the following disable plugin patterns: local, spacewalk, versionlock
+2023-05-22 15:21:08.064787 +0000 build-iso: output: fedora                                          0.0  B/s |   0  B     00:02
+2023-05-22 15:21:08.064818 +0000 build-iso: output: Errors during downloading metadata for repository 'fedora':
+2023-05-22 15:21:08.064916 +0000 build-iso: output:   - Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=fedora-37&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2023-05-22 15:21:08.064944 +0000 build-iso: output: Error: Failed to download metadata for repo 'fedora': Cannot prepare internal mirrorlist: Curl error (6): Couldn't resolve host name for https://mirrors.fedoraproject.org/metalink?repo=fedora-37&arch=x86_64 [Could not resolve host: mirrors.fedoraproject.org]
+2023-05-22 15:21:08.064986 +0000 build-iso: output: 
+2023-05-22 15:21:09.743081 +0000 > closing log
