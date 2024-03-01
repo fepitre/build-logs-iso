@@ -1,0 +1,4 @@
+2024-03-01 22:18:35.049020 +0000 > starting log
+2024-03-01 22:18:35.049534 +0000 build-iso: > starting build with log
+2024-03-01 22:18:46.624436 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp1722 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Finstaller /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/installer
+2024-03-01 22:18:49.240905 +0000 > closing log
