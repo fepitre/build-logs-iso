@@ -1,0 +1,8 @@
+2024-05-11 13:19:30.026938 +0000 > starting log
+2024-05-11 13:19:30.027322 +0000 build-iso: > starting build with log
+2024-05-11 13:19:30.027342 +0000 build-iso: Executing 'bash -c rsync --partial --progress --hard-links -air --mkpath -- /home/user/builder-iso-r4.2/iso/ qubes.notset.fr:/data/qubes/iso-testing/'.
+2024-05-11 13:21:40.722803 +0000 build-iso: output: kex_exchange_identification: Connection closed by remote host.
+2024-05-11 13:21:40.722872 +0000 build-iso: output: Connection closed by UNKNOWN port 65535.
+2024-05-11 13:21:40.723413 +0000 build-iso: output: rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+2024-05-11 13:21:40.723493 +0000 build-iso: output: rsync error: error in rsync protocol data stream (code 12) at io.c(231) [sender=3.3.0]
+2024-05-11 13:21:40.742166 +0000 > closing log
