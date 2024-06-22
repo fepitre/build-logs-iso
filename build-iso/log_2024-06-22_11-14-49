@@ -1,0 +1,18 @@
+2024-06-22 11:14:49.106747 +0000 > starting log
+2024-06-22 11:14:49.107096 +0000 build-iso: > starting build with log
+2024-06-22 11:14:49.107132 +0000 build-iso: qubes-release: source already fetched. Updating.
+2024-06-22 11:14:56.449330 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5605 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-iso-r4.2/sources/qubes-release
+2024-06-22 11:14:56.762355 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp5605 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch
+2024-06-22 11:14:56.990343 +0000 build-iso: Executing '/usr/bin/qvm-run-vm -- disp5605 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch release4.2 --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724''.
+2024-06-22 11:15:02.549097 +0000 build-iso: output: --> Verifying tags...
+2024-06-22 11:15:02.549164 +0000 build-iso: output: ---> Good tag 538eaedc4d71f7dce40b9b3755e95ebdfd6f14eb.
+2024-06-22 11:15:02.549184 +0000 build-iso: output: Enough distinct tag signatures. Found 1, mandatory minimum is 1.
+2024-06-22 11:15:02.549219 +0000 build-iso: output: --> Merging...
+2024-06-22 11:15:02.570274 +0000 build-iso: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp5605 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--release /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.2/sources
+2024-06-22 11:15:04.822760 +0000 build-iso: ['cd -- /builder', "git -C /builder/qubes-release rev-parse 'HEAD^{}' >> hash", "git -C /builder/qubes-release tag --points-at HEAD --list 'v*' >> vtags"]
+2024-06-22 11:15:12.084246 +0000 build-iso: copy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp6801 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-iso-r4.2/sources/qubes-release
+2024-06-22 11:15:12.469370 +0000 build-iso: Executing '/usr/bin/qvm-run-vm -- disp6801 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/qubes-release rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/qubes-release tag --points-at HEAD --list '"'"'v*'"'"' >> vtags''.
+2024-06-22 11:15:12.843663 +0000 build-iso: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6801 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.2/tmp/tmpfiq80ssi
+2024-06-22 11:15:13.131381 +0000 build-iso: copy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp6801 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.2/tmp/tmpfiq80ssi
+2024-06-22 11:15:15.463198 +0000 build-iso: > done
+2024-06-22 11:15:15.463263 +0000 > closing log
