@@ -1,0 +1,10 @@
+2024-07-26 23:12:48.304026 +0000 > starting log
+2024-07-26 23:12:48.304188 +0000 build-iso: > starting build with log
+2024-07-26 23:12:48.304206 +0000 build-iso: dependency 'qubes-release' (commit hash: 8f93d31de29b6bec81d4aa990b5a421770a15024)
+2024-07-26 23:12:48.304216 +0000 build-iso: Executing 'bash -c rsync --partial --progress --hard-links -air --mkpath -- /home/user/builder-iso-r4.2/iso/ qubes.notset.fr:/data/qubes/iso-testing/'.
+2024-07-26 23:12:48.451494 +0000 build-iso: output: Permission denied, please try again..
+2024-07-26 23:12:48.460355 +0000 build-iso: output: Permission denied, please try again..
+2024-07-26 23:12:48.469533 +0000 build-iso: output: fepitre2-bot@qubes.notset.fr: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password)..
+2024-07-26 23:12:48.470074 +0000 build-iso: output: rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+2024-07-26 23:12:48.470119 +0000 build-iso: output: rsync error: unexplained error (code 255) at io.c(231) [sender=3.3.0]
+2024-07-26 23:12:48.489788 +0000 > closing log
