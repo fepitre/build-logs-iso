@@ -1,0 +1,20 @@
+2024-09-04 07:41:01.399439 +0000 > starting log
+2024-09-04 07:41:01.399641 +0000 build-iso: .[38;5;246m09:41:00 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2024-09-04 07:41:01.399662 +0000 build-iso: .[38;5;246m09:41:00 .[96m[qb] .[0mRunning stage 'fetch'.[0m
+2024-09-04 07:41:09.784587 +0000 build-iso: .[38;5;246m09:41:09 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mcopy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp4797 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch.[0m
+2024-09-04 07:41:10.160664 +0000 build-iso: .[38;5;246m09:41:09 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp4797..[0m
+2024-09-04 07:41:10.160733 +0000 build-iso: .[38;5;246m09:41:09 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp4797 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724'.[0m
+2024-09-04 07:41:12.403605 +0000 build-iso: .[38;5;246m09:41:12 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2024-09-04 07:41:12.403672 +0000 build-iso: .[38;5;246m09:41:12 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 279338a8bad61bf5111f014dcb37ac00e5444c1a..[0m
+2024-09-04 07:41:12.403697 +0000 build-iso: .[38;5;246m09:41:12 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2024-09-04 07:41:12.403724 +0000 build-iso: .[38;5;246m09:41:12 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Switching branch from main branch to main.[0m
+2024-09-04 07:41:12.420226 +0000 build-iso: .[38;5;246m09:41:12 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mcopy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp4797 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--release /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.3/sources.[0m
+2024-09-04 07:41:14.957471 +0000 build-iso: .[38;5;246m09:41:14 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-r4.3/logs/20240904T074054-qubes-release.log.[0m
+2024-09-04 07:41:14.962612 +0000 build-iso: .[38;5;246m09:41:14 .[96m[qb.fetch.qubes-release] .[38;5;246m['cd -- /builder', "git -C /builder/qubes-release rev-parse 'HEAD^{}' >> hash", "git -C /builder/qubes-release tag --points-at HEAD --list 'v*' >> vtags"].[0m
+2024-09-04 07:41:23.362549 +0000 build-iso: .[38;5;246m09:41:23 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mcopy-in (cmd): /usr/lib/qubes/qrexec-client-vm -- disp3695 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-iso-r4.3/sources/qubes-release.[0m
+2024-09-04 07:41:23.715838 +0000 build-iso: .[38;5;246m09:41:23 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp3695..[0m
+2024-09-04 07:41:23.715909 +0000 build-iso: .[38;5;246m09:41:23 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp3695 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/qubes-release rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/qubes-release tag --points-at HEAD --list '"'"'v*'"'"' >> vtags'.[0m
+2024-09-04 07:41:23.922389 +0000 build-iso: .[38;5;246m09:41:23 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mcopy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3695 qubesbuilder.FileCopyOut+-2Fbuilder-2Fhash /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.3/tmp/tmpc_m7pb0i.[0m
+2024-09-04 07:41:24.091484 +0000 build-iso: .[38;5;246m09:41:23 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mcopy-out (cmd): /usr/lib/qubes/qrexec-client-vm disp3695 qubesbuilder.FileCopyOut+-2Fbuilder-2Fvtags /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.3/tmp/tmpc_m7pb0i.[0m
+2024-09-04 07:41:26.606081 +0000 build-iso: .[38;5;246m09:41:26 .[96m[qb] .[38;5;246m> done.[0m
+2024-09-04 07:41:26.606146 +0000 > closing log
