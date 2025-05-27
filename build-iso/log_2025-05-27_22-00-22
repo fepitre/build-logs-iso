@@ -1,0 +1,20 @@
+2025-05-27 22:00:22.641790 +0000 > starting log
+2025-05-27 22:00:22.642203 +0000 build-iso: .[38;5;246m00:00:15 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2025-05-27 22:00:22.642220 +0000 build-iso: .[38;5;246m00:00:15 .[96m[qb] .[0mRunning stages: fetch.[0m
+2025-05-27 22:00:22.642231 +0000 build-iso: .[38;5;246m00:00:16 .[96m[qb.fetch.qubes-release] .[0mqubes-release: source already fetched. Updating..[0m
+2025-05-27 22:00:22.642243 +0000 build-iso: .[38;5;246m00:00:16 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (create disposable qube): /usr/lib/qubes/qrexec-client-vm -- builder-dvm admin.vm.CreateDisposable.[0m
+2025-05-27 22:00:22.642254 +0000 build-iso: .[38;5;246m00:00:16 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (start vm): /usr/lib/qubes/qrexec-client-vm -- disp5099 admin.vm.Start.[0m
+2025-05-27 22:00:23.527573 +0000 build-iso: .[38;5;246m00:00:23 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (copy builder rpc services): /usr/lib/qubes/qrexec-client-vm --filter-escape-chars-stderr -- disp5099 qubes.Filecopy /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/rpc/qubesbuilder.FileCopyIn /home/user/qubes-builderv2/rpc/qubesbuilder.FileCopyOut.[0m
+2025-05-27 22:00:24.747871 +0000 build-iso: .[38;5;246m00:00:24 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (copy-in): /usr/lib/qubes/qrexec-client-vm -- disp5099 qubesbuilder.FileCopyIn+-2Fbuilder-2Fqubes--release /usr/lib/qubes/qfile-agent /home/user/builder-iso-r4.3/sources/qubes-release.[0m
+2025-05-27 22:00:25.114827 +0000 build-iso: .[38;5;246m00:00:25 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (copy-in): /usr/lib/qubes/qrexec-client-vm -- disp5099 qubesbuilder.FileCopyIn+-2Fbuilder-2Fplugins-2Ffetch /usr/lib/qubes/qfile-agent /home/user/qubes-builderv2/qubesbuilder/plugins/fetch.[0m
+2025-05-27 22:00:25.566388 +0000 build-iso: .[38;5;246m00:00:25 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp5099..[0m
+2025-05-27 22:00:25.566466 +0000 build-iso: .[38;5;246m00:00:25 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp5099 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724'.[0m
+2025-05-27 22:00:26.962036 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2025-05-27 22:00:26.962100 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 6c5d70d023b60ab9f790e172924549a6a13b161f..[0m
+2025-05-27 22:00:26.962123 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2025-05-27 22:00:26.962297 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Merging....[0m
+2025-05-27 22:00:26.991436 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (copy-out): /usr/lib/qubes/qrexec-client-vm -- disp5099 qubesbuilder.FileCopyOut+-2Fbuilder-2Fqubes--release /usr/bin/qfile-unpacker 1000 /home/user/builder-iso-r4.3/sources.[0m
+2025-05-27 22:00:27.172843 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mqrexec call (kill vm): /usr/lib/qubes/qrexec-client-vm -- disp5099 admin.vm.Kill.[0m
+2025-05-27 22:00:29.004385 +0000 build-iso: .[38;5;246m00:00:28 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-r4.3/logs/20250527T220000-qubes-release.log.[0m
+2025-05-27 22:00:29.027499 +0000 build-iso: .[38;5;246m00:00:29 .[96m[qb] .[38;5;246m> done.[0m
+2025-05-27 22:00:29.027534 +0000 > closing log
