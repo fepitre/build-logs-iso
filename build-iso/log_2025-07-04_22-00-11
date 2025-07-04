@@ -1,0 +1,13 @@
+2025-07-04 22:00:11.303988 +0000 > starting log
+2025-07-04 22:00:11.304231 +0000 build-iso: .[38;5;246m00:00:11 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2025-07-04 22:00:11.304245 +0000 build-iso: .[38;5;246m00:00:11 .[96m[qb] .[0mRunning stages: fetch.[0m
+2025-07-04 22:00:11.304254 +0000 build-iso: .[38;5;246m00:00:11 .[96m[qb.fetch.qubes-release] .[0mqubes-release: source already fetched. Updating..[0m
+2025-07-04 22:00:20.922669 +0000 build-iso: .[38;5;246m00:00:20 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp8982..[0m
+2025-07-04 22:00:20.922748 +0000 build-iso: .[38;5;246m00:00:20 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp8982 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch release4.2 --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724'.[0m
+2025-07-04 22:00:22.274441 +0000 build-iso: .[38;5;246m00:00:22 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2025-07-04 22:00:22.275283 +0000 build-iso: .[38;5;246m00:00:22 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 376c9acd9955a05080bab94e4facf193e9b04fe6..[0m
+2025-07-04 22:00:22.275346 +0000 build-iso: .[38;5;246m00:00:22 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2025-07-04 22:00:22.275410 +0000 build-iso: .[38;5;246m00:00:22 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Merging....[0m
+2025-07-04 22:00:24.485121 +0000 build-iso: .[38;5;246m00:00:24 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-r4.2/logs/20250704T220004-qubes-release.log.[0m
+2025-07-04 22:00:24.494388 +0000 build-iso: .[38;5;246m00:00:24 .[96m[qb] .[38;5;246m> done.[0m
+2025-07-04 22:00:24.494430 +0000 > closing log
