@@ -1,0 +1,14 @@
+2026-03-03 23:00:14.571838 +0000 > starting log
+2026-03-03 23:00:14.572529 +0000 build-iso: .[38;5;246m00:00:14 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2026-03-03 23:00:14.572560 +0000 build-iso: .[38;5;246m00:00:14 .[96m[qb] .[0mRunning stages: fetch.[0m
+2026-03-03 23:00:14.572580 +0000 build-iso: .[38;5;246m00:00:14 .[96m[qb.fetch.qubes-release] .[0mqubes-release: source already fetched. Updating..[0m
+2026-03-03 23:00:25.091106 +0000 build-iso: .[38;5;246m00:00:25 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp5622..[0m
+2026-03-03 23:00:25.091209 +0000 build-iso: .[38;5;246m00:00:25 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp5622 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724'.[0m
+2026-03-03 23:00:27.095719 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2026-03-03 23:00:27.095788 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag ba9ab08a35be036156145ee456a3e33323c232a9..[0m
+2026-03-03 23:00:27.095814 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 2e430f9d627cc166af580db380cdcc0a6c320b8a..[0m
+2026-03-03 23:00:27.095853 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2026-03-03 23:00:27.095949 +0000 build-iso: .[38;5;246m00:00:27 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Merging....[0m
+2026-03-03 23:00:30.347343 +0000 build-iso: .[38;5;246m00:00:30 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-r4.3/logs/20260303T230001-qubes-release.log.[0m
+2026-03-03 23:00:30.365285 +0000 build-iso: .[38;5;246m00:00:30 .[96m[qb] .[38;5;246m> done.[0m
+2026-03-03 23:00:30.365319 +0000 > closing log
