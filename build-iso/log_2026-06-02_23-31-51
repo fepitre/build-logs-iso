@@ -1,0 +1,9 @@
+2026-06-02 23:31:51.626012 +0000 > starting log
+2026-06-02 23:31:51.626332 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2026-06-02 23:31:51.626351 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41] .[0mLog file: /home/user/builder-iso-r4.3/logs/20260602T220000-host-fc41.log.[0m
+2026-06-02 23:31:51.626364 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41] .[0mdependency 'qubes-release' (commit hash: 27a4575b2beaf384af985f28df02743f88b356ce).[0m
+2026-06-02 23:31:51.626386 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41.upload] .[38;5;246mUsing executor local:/tmp/12577670104392063633b25/builder to run '['bash', '-c', 'rsync --partial --progress --hard-links -OJair --mkpath -- /home/user/builder-iso-r4.3/iso/ qubes.notset.fr:/data/qubes/iso-testing/']'..[0m
+2026-06-02 23:31:51.626399 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41.upload] .[38;5;246mConnection closed by UNKNOWN port 65535.[0m
+2026-06-02 23:31:51.626409 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41.upload] .[38;5;246mrsync: connection unexpectedly closed (0 bytes received so far) [sender].[0m
+2026-06-02 23:31:51.626420 +0000 build-iso: .[38;5;246m01:31:51 .[96m[qb.installer.host-fc41.upload] .[38;5;246mrsync error: unexplained error (code 255) at io.c(232) [sender=3.4.1].[0m
+2026-06-02 23:31:51.626426 +0000 > closing log
