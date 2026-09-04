@@ -1,0 +1,15 @@
+2026-09-04 22:00:50.248215 +0000 > starting log
+2026-09-04 22:00:50.248654 +0000 build-iso: .[38;5;246m00:00:50 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2026-09-04 22:00:50.248676 +0000 build-iso: .[38;5;246m00:00:50 .[96m[qb] .[0mRunning stages: fetch.[0m
+2026-09-04 22:00:58.879590 +0000 build-iso: .[38;5;246m00:00:59 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp944..[0m
+2026-09-04 22:00:58.879707 +0000 build-iso: .[38;5;246m00:00:59 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp944 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 77EEEF6D0386962AEA8CF84A9B8273F80AC219E6'.[0m
+2026-09-04 22:01:05.119400 +0000 build-iso: .[38;5;246m00:01:05 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2026-09-04 22:01:05.119450 +0000 build-iso: .[38;5;246m00:01:05 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 7a3f580b3e8f888e85a552fb0566a763838ae709..[0m
+2026-09-04 22:01:05.119463 +0000 build-iso: .[38;5;246m00:01:05 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2026-09-04 22:01:05.119473 +0000 build-iso: .[38;5;246m00:01:05 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Switching branch from main branch to main.[0m
+2026-09-04 22:01:06.308184 +0000 build-iso: .[38;5;246m00:01:06 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-rdevel/logs/20260904T220000-qubes-release.log.[0m
+2026-09-04 22:01:06.311041 +0000 build-iso: .[38;5;246m00:01:06 .[96m[qb.fetch.qubes-release] .[38;5;246m['cd -- /builder', "git -C /builder/qubes-release rev-parse 'HEAD^{}' >> hash", "git -C /builder/qubes-release tag --points-at HEAD --list 'v*' >> vtags"].[0m
+2026-09-04 22:01:14.935828 +0000 build-iso: .[38;5;246m00:01:15 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp8047..[0m
+2026-09-04 22:01:14.935886 +0000 build-iso: .[38;5;246m00:01:15 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp8047 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd -- /builder && git -C /builder/qubes-release rev-parse '"'"'HEAD^{}'"'"' >> hash && git -C /builder/qubes-release tag --points-at HEAD --list '"'"'v*'"'"' >> vtags'.[0m
+2026-09-04 22:01:16.737390 +0000 build-iso: .[38;5;246m00:01:16 .[96m[qb] .[38;5;246m> done.[0m
+2026-09-04 22:01:16.737444 +0000 > closing log
