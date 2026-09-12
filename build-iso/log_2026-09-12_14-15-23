@@ -1,0 +1,64 @@
+2026-09-12 14:15:23.563152 +0000 > starting log
+2026-09-12 14:15:23.563916 +0000 build-iso: + keyring_path=/home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg
+2026-09-12 14:15:23.563934 +0000 build-iso: + scripts_dir=/usr/local/lib/qubes-builder-github
+2026-09-12 14:15:23.563945 +0000 build-iso: + '[' /usr/local/lib/qubes-builder-github/keys -nt /home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg ']'
+2026-09-12 14:15:23.563950 +0000 build-iso: + . /usr/local/lib/qubes-builder-github/lib/functions.sh
+2026-09-12 14:15:23.563956 +0000 build-iso: ++ config_file=/home/user/.config/qubes-builder-github/builders.list
+2026-09-12 14:15:23.563961 +0000 build-iso: ++ '[' -z /home/user/builder-github-logs/1789222523-16735 ']'
+2026-09-12 14:15:23.563965 +0000 build-iso: +++ mktemp -d
+2026-09-12 14:15:23.563974 +0000 build-iso: ++ tmpdir=/tmp/tmp.ACdrKcKWnj
+2026-09-12 14:15:23.563979 +0000 build-iso: ++ trap 'rm -rf $tmpdir' EXIT
+2026-09-12 14:15:23.563983 +0000 build-iso: ++ command -v mkmetalink
+2026-09-12 14:15:23.563987 +0000 build-iso: /home/user/.local/bin/mkmetalink
+2026-09-12 14:15:23.563991 +0000 build-iso: + command_signer=
+2026-09-12 14:15:23.563999 +0000 build-iso: + read_stdin_command_and_verify_signature /usr/local/lib/qubes-builder-github /home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg /tmp/tmp.ACdrKcKWnj/command command_signer
+2026-09-12 14:15:23.564005 +0000 build-iso: + local fpr python_script_path local_keyring_path local_output_file local_signer
+2026-09-12 14:15:23.564009 +0000 build-iso: + '[' 4 -ne 4 ']'
+2026-09-12 14:15:23.564013 +0000 build-iso: + python_script_path=/usr/local/lib/qubes-builder-github
+2026-09-12 14:15:23.564019 +0000 build-iso: + local_keyring_path=/home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg
+2026-09-12 14:15:23.564023 +0000 build-iso: + local_output_file=/tmp/tmp.ACdrKcKWnj/command
+2026-09-12 14:15:23.564028 +0000 build-iso: + local_signer=command_signer
+2026-09-12 14:15:23.564033 +0000 build-iso: + '[' -r /home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg ']'
+2026-09-12 14:15:23.564037 +0000 build-iso: + '[' -d /tmp/tmp.ACdrKcKWnj ']'
+2026-09-12 14:15:23.564043 +0000 build-iso: + /usr/local/lib/qubes-builder-github/utils/parse-command /tmp/tmp.ACdrKcKWnj/untrusted_command /tmp/tmp.ACdrKcKWnj/untrusted_command.sig
+2026-09-12 14:15:23.564047 +0000 build-iso: + exec
+2026-09-12 14:15:23.564051 +0000 build-iso: + '[' '!' -r /tmp/tmp.ACdrKcKWnj/untrusted_command ']'
+2026-09-12 14:15:23.564056 +0000 build-iso: + '[' '!' -r /tmp/tmp.ACdrKcKWnj/untrusted_command.sig ']'
+2026-09-12 14:15:23.564060 +0000 build-iso: ++ date --iso-8601=seconds -d tomorrow
+2026-09-12 14:15:23.564064 +0000 build-iso: + future=2026-09-13T16:15:23+02:00
+2026-09-12 14:15:23.564072 +0000 build-iso: ++ sqv --not-after 2026-09-13T16:15:23+02:00 --keyring /home/user/.config/qubes-builder-github/trusted-keys-for-commands.gpg -- /tmp/tmp.ACdrKcKWnj/untrusted_command.sig /tmp/tmp.ACdrKcKWnj/untrusted_command
+2026-09-12 14:15:23.564077 +0000 build-iso: + fpr=17B7CC1986BD3D28C41475B6846D6B709C6E2E7F
+2026-09-12 14:15:23.564081 +0000 build-iso: + [[ 17B7CC1986BD3D28C41475B6846D6B709C6E2E7F =~ ^[A-F0-9]{40}$ ]]
+2026-09-12 14:15:23.564085 +0000 build-iso: + '[' -n command_signer ']'
+2026-09-12 14:15:23.564090 +0000 build-iso: + eval 'command_signer=$fpr'
+2026-09-12 14:15:23.564094 +0000 build-iso: ++ command_signer=17B7CC1986BD3D28C41475B6846D6B709C6E2E7F
+2026-09-12 14:15:23.564098 +0000 build-iso: + rm -f /tmp/tmp.ACdrKcKWnj/gpg-status
+2026-09-12 14:15:23.564102 +0000 build-iso: + head -n 1 /tmp/tmp.ACdrKcKWnj/untrusted_command
+2026-09-12 14:15:23.564106 +0000 build-iso: + echo ''
+2026-09-12 14:15:23.564110 +0000 build-iso: + printf 'Command: '
+2026-09-12 14:15:23.564117 +0000 build-iso: Command: + cat /tmp/tmp.ACdrKcKWnj/command
+2026-09-12 14:15:23.564121 +0000 build-iso: Build-iso rdevel 4.4.202609121615 202609121615
+2026-09-12 14:15:23.564126 +0000 build-iso: + trap 'rc=$?; rm -rf "$tmpdir"; [ "$rc" -eq 0 ] || upload_command_log' EXIT
+2026-09-12 14:15:23.564130 +0000 build-iso: + read -r action args
+2026-09-12 14:15:23.564133 +0000 build-iso: + case "$action" in
+2026-09-12 14:15:23.564141 +0000 build-iso: + /usr/local/lib/qubes-builder-github/github-command.py dispatch --command-log /home/user/builder-github-logs/1789222523-16735.log --signer-fpr 17B7CC1986BD3D28C41475B6846D6B709C6E2E7F Build-iso /tmp/tmp.ACdrKcKWnj/command
+2026-09-12 14:15:23.564193 +0000 build-iso: Traceback (most recent call last):
+2026-09-12 14:15:23.564201 +0000 build-iso:   File "/usr/local/lib/qubes-builder-github/github-command.py", line 706, in <module>
+2026-09-12 14:15:23.564206 +0000 build-iso:     main()
+2026-09-12 14:15:23.564209 +0000 build-iso:     ~~~~^^
+2026-09-12 14:15:23.564214 +0000 build-iso:   File "/usr/local/lib/qubes-builder-github/github-command.py", line 701, in main
+2026-09-12 14:15:23.564219 +0000 build-iso:     args.func(args)
+2026-09-12 14:15:23.564223 +0000 build-iso:     ~~~~~~~~~^^^^^^
+2026-09-12 14:15:23.564228 +0000 build-iso:   File "/usr/local/lib/qubes-builder-github/github-command.py", line 161, in _run_dispatch
+2026-09-12 14:15:23.564232 +0000 build-iso:     raise GithubCommandError(
+2026-09-12 14:15:23.564238 +0000 build-iso:         f"Timestamp outside of allowed range (min: {timestamp_min}, max: {timestamp_max}, current={timestamp})"
+2026-09-12 14:15:23.564242 +0000 build-iso:     )
+2026-09-12 14:15:23.564248 +0000 build-iso: GithubCommandError: Timestamp outside of allowed range (min: 2026-09-12 13:15:23.511203+00:00, max: 2026-09-12 14:20:23.511203+00:00, current=2026-09-12 16:15:00+00:00)
+2026-09-12 14:15:23.564256 +0000 build-iso: 2026-09-12 16:15:23,511 [github-command] ERROR: Timestamp outside of allowed range (min: 2026-09-12 13:15:23.511203+00:00, max: 2026-09-12 14:20:23.511203+00:00, current=2026-09-12 16:15:00+00:00)
+2026-09-12 14:15:23.564260 +0000 build-iso: + rc=1
+2026-09-12 14:15:23.564264 +0000 build-iso: + rm -rf /tmp/tmp.ACdrKcKWnj
+2026-09-12 14:15:23.564268 +0000 build-iso: + '[' 1 -eq 0 ']'
+2026-09-12 14:15:23.564272 +0000 build-iso: + upload_command_log
+2026-09-12 14:15:23.564277 +0000 build-iso: + '[' -s /home/user/builder-github-logs/1789222523-16735.log ']'
+2026-09-12 14:15:23.564281 +0000 build-iso: + qrexec-client-vm dom0 qubesbuilder.BuildLog
+2026-09-12 14:15:23.564287 +0000 > closing log
