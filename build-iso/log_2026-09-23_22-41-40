@@ -1,0 +1,13 @@
+2026-09-23 22:41:40.826585 +0000 > starting log
+2026-09-23 22:41:40.827302 +0000 build-iso: .[38;5;246m00:41:40 .[96m[qb] .[38;5;246m> starting build with log.[0m
+2026-09-23 22:41:40.827321 +0000 build-iso: .[38;5;246m00:41:40 .[96m[qb] .[0mRunning stages: fetch.[0m
+2026-09-23 22:41:40.827331 +0000 build-iso: .[38;5;246m00:41:40 .[96m[qb.fetch.qubes-release] .[0mqubes-release: source already fetched. Updating..[0m
+2026-09-23 22:41:49.684147 +0000 build-iso: .[38;5;246m00:41:49 .[96m[qb.fetch.qubes-release.fetch] .[0mUsing executor qubes:disp8749..[0m
+2026-09-23 22:41:49.684217 +0000 build-iso: .[38;5;246m00:41:49 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m/usr/bin/qvm-run-vm -- disp8749 env -- VERBOSE=1 DEBUG=1 BACKEND_VMM=xen bash -c 'cd /builder && /builder/plugins/fetch/scripts/get-and-verify-source.py https://github.com/QubesOS/qubes-qubes-release.git /builder/qubes-release /builder/keyring /builder/plugins/fetch/keys --git-branch main --minimum-distinct-maintainers 1 --maintainer 0064428F455451B3EBE78A7F063938BA42CFA724 --maintainer 77EEEF6D0386962AEA8CF84A9B8273F80AC219E6'.[0m
+2026-09-23 22:41:51.158611 +0000 build-iso: .[38;5;246m00:41:51 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Verifying tags....[0m
+2026-09-23 22:41:51.158664 +0000 build-iso: .[38;5;246m00:41:51 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m---> Good tag 099b49132f04368716da9deb26bf6e5ba86128a6..[0m
+2026-09-23 22:41:51.158677 +0000 build-iso: .[38;5;246m00:41:51 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246mEnough distinct tag signatures. Found 1, mandatory minimum is 1..[0m
+2026-09-23 22:41:51.158687 +0000 build-iso: .[38;5;246m00:41:51 .[96m[qb.fetch.qubes-release.fetch] .[38;5;246m--> Merging....[0m
+2026-09-23 22:41:52.294443 +0000 build-iso: .[38;5;246m00:41:52 .[96m[qb.fetch.qubes-release] .[0mLog file: /home/user/builder-iso-rdevel/logs/20260923T224046-qubes-release.log.[0m
+2026-09-23 22:41:52.305316 +0000 build-iso: .[38;5;246m00:41:52 .[96m[qb] .[38;5;246m> done.[0m
+2026-09-23 22:41:52.305344 +0000 > closing log
